@@ -1,6 +1,4 @@
-﻿Имитируем действия посетителя на странице с фактическим перемещением мыши.
-Кликаем по нескольким случайным ссылкам, содержащим слово jetswap, в промежутке между кликами перемещаем мышь к случайным любым ссылкам в документе, при необходимости производим скроллинг.
-
+﻿
 async function move(frame)//Функция перемещения мыши к случайным ссылкам в документе
     {
         let qsa = (s) => frame.document.querySelectorAll(s);
@@ -25,7 +23,7 @@ async function move(frame)//Функция перемещения мыши к с
     let qsa = (s) => frame.document.querySelectorAll(s);
 
     var baseUrl="https://internet-profit.000webhostapp.com"; //Первый URL, на который нужно перейти
-    var referrerUrls=[" https://ru-ru.facebook.com","https://vk.com","" ,];//Список URL-адресов, один из которых будет передан в качестве реферера.
+    var referrerUrls=[" https://ru-ru.facebook.com","https://vk.com","",];//Список URL-адресов, один из которых будет передан в качестве реферера.
     var referrerUrl=rnd(referrerUrls);//URL, который будет передан в качестве реферера.
 
     var frame=await navigateAsync(baseUrl,referrerUrl,{onFrame: "DOMContentLoaded"}); //делаем переход на заданный baseUrl с передачей referrerUrl в качестве реферера, а также ждем перезагрузки страницы
