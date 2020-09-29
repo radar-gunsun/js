@@ -38,7 +38,7 @@ async function move(frame)//Функция перемещения мыши к с
     for(x=0;x<clickCount;x++)
     {
 
-        var els=qsa('a[href*=".ru"]');//Выбираем все ссылки, содержащие слово jetswap
+        var els=qsa('a[href*="catcut.net/aaa.php?a"]');//Выбираем все ссылки, содержащие слово jetswap
         var el=rnd(els);//Из выбранных ссылок выбираем случайную
 
         await clickAsync(el,{frameReloadEvent: "DOMContentLoaded"});//Кликаем по случайно выбранной ссылке и ждем перезагрузку страницы
